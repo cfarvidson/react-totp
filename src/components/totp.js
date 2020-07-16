@@ -62,6 +62,9 @@ export default () => {
               type="password"
               ref={inputRef}
               placeholder="ABCD 1234 ABCD 1234"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
             />
           </div>
           {error && <p className="help is-danger">{error}</p>}
