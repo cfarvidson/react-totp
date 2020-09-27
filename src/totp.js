@@ -18,7 +18,7 @@ const dynamicTruncationFn = (hmacValue) => {
 };
 
 const generateHOTP = (secret, counter) => {
-  const decodedSecret = base32.decode.asBytes(secret);
+  const decodedSecret = base32.decode.asBytes(secret.toUpperCase());
   const buffer = Buffer.alloc(8);
   for (let i = 0; i < 8; i++) {
     buffer[7 - i] = counter & 0xff;
